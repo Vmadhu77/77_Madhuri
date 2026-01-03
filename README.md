@@ -35,3 +35,17 @@ Produces a sample reminder schedule based on dosage instructions.
 Returns answers along with a JSON-based reminder plan suitable for integration with other systems.
 * Safety-Focused Design
 Prevents hallucinations and avoids personalized medical advice.
+
+Tech Stack:
+     Programming Language:Python  
+     AI Architecture:Retrieval-Augmented Generation (RAG)  
+     LLM Framework:LangChain  
+     Vector Database:ChromaDB    
+     Data Source:openFDA Drug Label Dataset   
+     Development Tools:GitHub, VS Code 
+     
+Use Cases:
+Patients seeking reliable drug information
+Caregivers assisting with medication management
+Educational demonstrations of healthcare-focused AI systems
+Prototyping safe, label-aware medical assistants
