@@ -1,70 +1,52 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Problem Statement
+Medication misuse and missed doses are common problems that can lead to reduced treatment effectiveness and serious health risks. 
+Many patients rely on memory or informal advice to understand how and when to take their medications.
 
-## Available Scripts
+Key challenges include:
+Drug information is often lengthy, technical, and difficult to understand
+Patients may misinterpret dosage instructions or side effects
+There is no simple way to query official drug information in a conversational manner
+Missed or incorrect doses can negatively impact patient safety
 
-In the project directory, you can run:
+This problem affects individuals managing regular medications, caregivers assisting patients, and anyone seeking reliable FDA-approved drug information. 
+Improving access to clear and accurate medication information is essential for patient safety and better adherence.
 
-### `npm start`
+Solution Description:
+The Medication Reminder Chatbot (Label-Aware) is an AI-powered assistant that provides accurate, FDA-approved drug information and generates logical medication reminder plans.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+What the system does:
+Uses official FDA drug label data as its only source of truth
+Allows users to ask natural-language questions about medications, such as:
+            What is this drug used for?
+            What are the common side effects?
+            How often can it be taken?
+Retrieves relevant information using Retrieval-Augmented Generation (RAG)
+Generates a sample medication reminder plan in structured JSON format
+Ensures responses are grounded, safe, and non-hallucinatory
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Key Features:
+* Label-Aware Question Answering
+Responds to questions about drug usage, dosage, side effects, and warnings using FDA-approved content.
+* Semantic Retrieval (RAG)
+Uses vector embeddings and a retrieval pipeline to fetch the most relevant drug label sections.
+* Medication Reminder Logic
+Produces a sample reminder schedule based on dosage instructions.
+* Structured Output
+Returns answers along with a JSON-based reminder plan suitable for integration with other systems.
+* Safety-Focused Design
+Prevents hallucinations and avoids personalized medical advice.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Tech Stack:
+     Programming Language:Python  
+     AI Architecture:Retrieval-Augmented Generation (RAG)  
+     LLM Framework:LangChain  
+     Vector Database:ChromaDB    
+     Data Source:openFDA Drug Label Dataset   
+     Development Tools:GitHub, VS Code 
+     
+Use Cases:
+Patients seeking reliable drug information
+Caregivers assisting with medication management
+Educational demonstrations of healthcare-focused AI systems
+Prototyping safe, label-aware medical assistants
